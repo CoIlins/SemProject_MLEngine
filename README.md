@@ -1,21 +1,26 @@
-   # SemProject_MLEngine
+# SemProject_MLEngine
 
-   Internship matching and skill-gap project.
+The machine learning part of our internship matching app. It reads a student's resume, finds matching internships, and shows which skills the student is missing.
 
-   ## Folders
-   | Folder | What goes in it | Owner |
-   |---|---|---|
-   | notebooks/resumes | Resume cleaning, EDA, modelling | Hafswa |
-   | notebooks/jobs | Jobs, pairs and local postings notebooks | Collins |
-   | notebooks/esco | ESCO and skills notebooks | Shifla |
-   | src | Shared code, e.g. clean_text.py (do not edit) | All |
-   | data | Notes only. Real data is in Drive | All |
-   | reports | Charts and results tables | All |
+## Main file
 
-   ## Data
-   Raw and cleaned CSVs are in Drive, not in this repo:
-   <paste Drive folder link>
+`<Model_Base.ipynb>` has everything: cleaning, analysis, modelling and checking the results. Open it in Google Colab and run the cells from top to bottom.
 
-   ## Naming
-   - Files: resume_clean.csv, jobs_clean.csv, pairs_clean.csv, local_clean.csv, esco_skills.csv
-   - Notebooks: 01_clean_resumes, 02_eda_resumes, 03_model_resumes (same pattern for jobs and esco)
+## Data
+
+The data is in Google Drive, not here: `https://drive.google.com/drive/folders/1OS_u2gUFYCGqZtl-Q2izLvgZZSFi9ZS9`
+
+- Resumes (Kaggle) 
+- Job postings (Kaggle) 
+- Resume and job pairs with scores (Hugging Face) 
+- Kenyan job postings we collected 
+- Skills list (ESCO) 
+
+## Other files
+
+- `src/clean_text.py` - the function we all use to clean text.
+- `Resume_Exploration.ipynb` - our first deliverable.
+
+## Team
+
+Hafswa, Collins and Shifla
