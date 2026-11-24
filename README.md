@@ -10,18 +10,13 @@ Open **[MiniLM_Final.ipynb](MiniLM_Final.ipynb)** for the complete, executed wor
 
 The numbered steps cover data loading, cleaning, exploration, model comparison, evaluation, valid and invalid examples, and saving/reloading the app-compatible model. Longer shared functions are included in expandable setup cells. No other project code file is needed to run the notebook.
 
-## Run it
+## Read or rerun
 
-**Recommended: Colab, on any computer with a browser.**
+**For assessment:** open the final notebook and read the saved results and five figures. No setup or retraining is needed to review it.
 
-1. Give the runner's Google account **Viewer** access to the [shared project folder](https://drive.google.com/drive/folders/11kEwky5_pJ6IpLfNWepHzNfzI0vKkW-2). The current data is restricted to named accounts; a public notebook does not make private Drive files public.
-2. Open the Colab link above, select **Runtime → Run all**, and complete the Google sign-in prompt in Step 1. The notebook reads the three CSVs directly by their Drive IDs; no personal folder paths or shortcuts are needed.
-3. Allow the run to finish. The first full CPU run took about 28 minutes in our check. Restart once if requested after dependency installation, then run all again. Keep the saved results visible during the demo.
-4. Download `UpShift_Final_Model.zip` from the Colab Files panel before ending the runtime if you want to retain the generated model. Original Drive data is never changed.
+**Only to rerun:** use Python 3.12/Jupyter with `requirements.txt`, download the three CSVs from the [shared Drive](https://drive.google.com/drive/folders/11kEwky5_pJ6IpLfNWepHzNfzI0vKkW-2) into one folder, and enter that folder's path in Step 1. In Colab, install the requirements and upload the CSVs into a folder in the Files panel first. The first full CPU run took about 28 minutes on our PC.
 
-**Local Jupyter/VS Code:** use a dedicated Python 3.12 environment, install `requirements.txt`, and download/extract `Resume.csv`, `postings.csv` and `skills_en.csv` from [AI Datasets](https://drive.google.com/drive/folders/1OS_u2gUFYCGqZtl-Q2izLvgZZSFi9ZS9). Run the notebook and paste your own dataset-folder path when Step 1 asks. It supports nested folders and checks the original file fingerprints. Results are saved in `UpShift_Final_Output` beside the notebook's working folder. No Windows username or fixed Downloads path is required.
-
-**Lecturer check:** share the project folder with the lecturer's Google email as a Viewer, send the Colab link, and ask them to run all while signed in with that account. If access is denied, check which account they used; do not make private data public just to bypass permissions.
+The lecturer needs Viewer access to the Drive folder only if downloading the data to rerun. Saved outputs can be read directly from the public notebook. Generated files go into `UpShift_Final_Output`; the original CSVs are unchanged.
 
 ## What we compared
 
