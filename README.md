@@ -4,9 +4,9 @@ Our engine compares a student's profile with job descriptions, ranks suggestions
 
 ## Final submission
 
-Open **[MiniLM_Final.ipynb](MiniLM_Final.ipynb)** for the complete, executed workflow.
+Open **[SemanticMatching_Final.ipynb](SemanticMatching_Final.ipynb)** for the complete, executed workflow.
 
-[Open in Google Colab](https://colab.research.google.com/github/CoIlins/SemProject_MLEngine/blob/main/MiniLM_Final.ipynb)
+[Open in Google Colab](https://colab.research.google.com/github/CoIlins/SemProject_MLEngine/blob/main/SemanticMatching_Final.ipynb)
 
 The numbered steps cover data loading, cleaning, exploration, model comparison, evaluation, valid and invalid examples, and saving/reloading the app-compatible model. The opening list matches nine collapsible step groups, with short explanations. Shared app functions are in one closed technical-reference group. The unused career-category experiment and frontend explanation text have been removed from the final walkthrough. No other project code file is needed to run the notebook.
 
@@ -20,7 +20,7 @@ The lecturer needs Viewer access to the Drive folder only if downloading the dat
 
 ## What we compared
 
-- **Job matching:** TF-IDF word matching against pretrained MiniLM meaning-based matching. MiniLM was not trained or fine-tuned by our team.
+- **Job matching:** TF-IDF word matching against semantic matching. The technical methods section identifies the pretrained text model used.
 - **Skill explanations:** ESCO names and rules compare required skills with the profile. This is separate from the meaning score.
 - **Feedback tone:** VADER rules against logistic regression trained on labelled TweetEval English text. Tone does not change job ranking. Sending feedback is a separate app operation.
 
