@@ -8,7 +8,7 @@ Open **[SemanticMatching_Final.ipynb](SemanticMatching_Final.ipynb)** for the co
 
 [Open in Google Colab](https://colab.research.google.com/github/CoIlins/SemProject_MLEngine/blob/main/SemanticMatching_Final.ipynb)
 
-The notebook builds on the original work in four collapsible sections: **cleaning**, **exploration**, **modelling**, and **semantic matching**. The original logistic regression, SVM, Naive Bayes, baseline, word-count, TF-IDF and LSA experiments are retained. Short explanations and charts describe what each check measures. The semantic sentence encoder is pretrained; the CV classifiers are trained in the notebook.
+The notebook builds on the original work in five visible sections: **cleaning**, **exploration**, **modelling**, **semantic matching**, and **the complete app model**. The original logistic regression, SVM, Naive Bayes, baseline, word-count, TF-IDF and LSA experiments are retained. Short explanations and charts describe what each check measures. The semantic sentence encoder is pretrained; the CV and feedback classifiers are trained in the notebook. All cells are visible, and the original base notebook is preserved unchanged.
 
 ## Read or rerun
 
@@ -23,12 +23,17 @@ The lecturer needs Viewer access to the Drive folder only if downloading the dat
 - **CV classification:** trained logistic regression, SVM and Naive Bayes against a majority-category baseline, including title-leakage and near-copy checks.
 - **Job matching:** word counts, TF-IDF, LSA and pretrained semantic matching on the same small research sample.
 - **Skill mentions:** ESCO phrase matching, overlap diagnostics and an exercise awaiting human review.
+- **Feedback:** logistic regression trained on labelled TweetEval English text, compared with VADER and a majority-label baseline. It never changes job ranking.
 
 The field-agreement check uses rough labels inferred from job titles, not verified job relevance. Human relevance ratings and the displayed skill review remain pending. Similarity is not a hiring probability. Historical international postings cannot establish current Kenyan eligibility.
 
 ## App handoff
 
-The notebook saves research models separately from the existing app deployment bundle. Running it does not replace or deploy the working backend model. The backend supplies approved vacancies; the app's semantic ranking and skill-context rules are implemented in the [mobile repository](https://github.com/wangui-technerd/Upshift/tree/android-frontend). Feedback-tone classification remains a separate experiment and does not change job ranking.
+The final section includes all shared model code and generates the complete backend-format package under `UpShift_Final_Output/live_app/artifacts/`: `upshift_bundle.joblib`, `deployment_config.json`, `semantic_encoder/` and `upshift_ai/`. It also creates `UpShift_Complete_Model.zip`. No separate project Python file is needed to run the notebook. The first run downloads the fixed encoder and TweetEval dataset versions.
+
+The rebuilt model was compared through the actual `backend.models.Models` adapter against the existing app model: **20 checks passed**, covering live/research ranking, skill explanations, feedback and invalid inputs. Scores and probabilities matched within 0.000001. Source-code equivalence, vocabulary, job IDs, skill rules and all 6,000 semantic vectors were checked too. Section 5.7 includes a portable comparison with recorded backend outputs.
+
+Running this notebook saves a separate package; it does not deploy it or modify the model currently used by the app. Accounts, approved vacancies and eligibility checks remain backend responsibilities. [Mobile repository](https://github.com/wangui-technerd/Upshift/tree/android-frontend).
 
 [Existing model handoff folder](https://drive.google.com/drive/folders/1tfmOnYKapGidW1i8TDKwe2CIQjgVpxpX)
 
