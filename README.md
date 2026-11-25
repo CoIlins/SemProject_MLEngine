@@ -1,26 +1,27 @@
-# SemProject_MLEngine
+# UpShift AI
 
-The machine learning part of our internship matching app. It reads a student's resume, finds matching internships, and shows which skills the student is missing.
+We built a job-matching workflow that compares a student’s profile with job descriptions and shows skills to check.
 
-## Main file
+## Our notebooks
 
-`<Model_Base.ipynb>` has everything: cleaning, analysis, modelling and checking the results. Open it in Google Colab and run the cells from top to bottom.
+- [Final notebook](SemanticMatching_Final.ipynb) — our complete workflow, results, charts and app-model code.
+- [Base notebook](LogisticRegression_Base.ipynb) — our original logistic-regression work, preserved unchanged.
+- [Open the final notebook in Colab](https://colab.research.google.com/github/CoIlins/SemProject_MLEngine/blob/main/SemanticMatching_Final.ipynb).
 
-## Data
+We compare word matching with semantic matching using a pretrained text model. We also train CV classifiers and a separate feedback-tone classifier. We explain our rule-based chatbot and course guidance at the end.
 
-The data is in Google Drive, not here: `https://drive.google.com/drive/folders/1OS_u2gUFYCGqZtl-Q2izLvgZZSFi9ZS9`
+## Run our notebook
 
-- Resumes (Kaggle) 
-- Job postings (Kaggle) 
-- Resume and job pairs with scores (Hugging Face) 
-- Kenyan job postings we collected 
-- Skills list (ESCO) 
+We include saved outputs, so the results can be reviewed without rerunning. To rerun:
 
-## Other files
+1. Use Python 3.12 and install `requirements.txt`.
+2. Download `Resume.csv`, `postings.csv` and `skills_en.csv` from our [dataset folder](https://drive.google.com/drive/folders/1OS_u2gUFYCGqZtl-Q2izLvgZZSFi9ZS9).
+3. Put them in one folder, enter its path in the setup cell and run the cells in order.
 
-- `src/clean_text.py` - the function we all use to clean text.
-- `Resume_Exploration.ipynb` - our first deliverable.
+Drive access is required for the data. The first full run also downloads the pretrained text model and labelled English tweets used for feedback training.
 
-## Team
+## Our app connection
 
-Hafswa, Collins and Shifla
+We export the backend files to `UpShift_Final_Output/live_app/artifacts/`. We checked the rebuilt model against our backend across 20 cases. Our [mobile repository](https://github.com/wangui-technerd/Upshift/tree/android-frontend) contains the app and setup instructions.
+
+Our scores do not predict hiring success. The matching evaluation uses rough career-field labels; independent human relevance review remains pending.

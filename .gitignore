@@ -1,3 +1,11 @@
    *.csv
    *.zip
    .ipynb_checkpoints/
+
+UpShift_Final_Output/
+*.joblib
+*.npy
+__pycache__/
+.env
+*service-account*.json
+*adminsdk*.json
