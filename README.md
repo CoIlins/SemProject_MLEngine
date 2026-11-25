@@ -10,6 +10,9 @@ Open **[SemanticMatching_Final.ipynb](SemanticMatching_Final.ipynb)** for the co
 
 The notebook builds on the original work in five visible sections: **cleaning**, **exploration**, **modelling**, **semantic matching**, and **the complete app model**. The original logistic regression, SVM, Naive Bayes, baseline, word-count, TF-IDF and LSA experiments are retained. Short explanations and charts describe what each check measures. The semantic sentence encoder is pretrained; the CV and feedback classifiers are trained in the notebook. All cells are visible, and the original base notebook is preserved unchanged.
 
+
+The final Section 6 explains the guided chatbot, growth/course lookup and Browse skills percentage, with the actual Kotlin logic visible. These are app rules, not additional trained models.
+
 ## Read or rerun
 
 **For assessment:** open the final notebook and read the saved results and charts. No setup or retraining is needed to review it.
